@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PRIME STORE</title>
+  <style>
+    /* Reset & body */
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
+    body { background: #111; color: #eee; line-height: 1.6; scroll-behavior: smooth; }
+    a { text-decoration: none; color: inherit; }
+
+    /* Navbar */
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; background: #000; position: fixed; width: 100%; top: 0; z-index: 100; }
+    .logo { display: flex; align-items: center; color: gold; font-weight: bold; font-size: 20px; }
+    .logo img { height: 40px; margin-right: 10px; }
+    .nav-links { list-style: none; display: flex; }
+    .nav-links li { margin-left: 20px; }
+    .nav-links a { color: #eee; transition: 0.3s; }
+    .nav-links a:hover { color: gold; }
+
+    /* Hero */
+    section { padding: 100px 50px; min-height: 100vh; }
+    .hero { text-align: center; background: linear-gradient(to right, #000, #222); }
+    .hero h1 { font-size: 48px; color: gold; margin-bottom: 20px; }
+    .hero p { font-size: 18px; margin-bottom: 30px; }
+    .btn { background: gold; color: #000; padding: 12px 25px; border-radius: 5px; font-weight: bold; transition: 0.3s; }
+    .btn:hover { background: #ffcc00; }
+
+    /* Features */
+    #features { background: #111; text-align: center; }
+    #features h2 { font-size: 36px; color: gold; margin-bottom: 30px; }
+    .feature-list { list-style: none; margin-top: 20px; }
+    .feature-list li { background: #222; margin: 10px auto; padding: 15px; border-radius: 5px; max-width: 600px; }
+
+    /* Gallery */
+    #gallery { background: #111; text-align: center; }
+    #gallery h2 { font-size: 36px; color: gold; margin-bottom: 30px; }
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .gallery-grid img { width: 100%; border-radius: 8px; }
+
+    /* Contact */
+    #contact { background: #111; text-align: center; }
+    #contact h2 { font-size: 36px; color: gold; margin-bottom: 20px; }
+    .contact-form { display: flex; flex-direction: column; max-width: 500px; margin: 0 auto; }
+    .contact-form input, .contact-form textarea { margin: 10px 0; padding: 12px; border-radius: 5px; border: none; }
+    .contact-form button { background: gold; color: #000; padding: 12px; border-radius: 5px; font-weight: bold; cursor: pointer; transition: 0.3s; }
+    .contact-form button:hover { background: #ffcc00; }
+    .social-links { margin-top: 20px; }
+
+    /* Floating download button */
+    .floating-btn { position: fixed; bottom: 30px; right: 30px; background: gold; color: #000; padding: 15px 25px; border-radius: 50px; font-weight: bold; box-shadow: 0 4px 6px rgba(0,0,0,0.3); transition: 0.3s; z-index: 200; }
+    .floating-btn:hover { background: #ffcc00; }
+
+    /* Footer */
+    footer { text-align: center; padding: 20px; background: #000; color: #eee; }
+
+    /* Smooth scrolling offset for fixed navbar */
+    section { scroll-margin-top: 80px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#hero" class="logo">
+      <img src="https://i.ibb.co/Q7FWfs4B/gtthy4gfe3mg6xntqkdq.png" alt="Prime Store Logo">
+      PRIME STORE
+    </a>
+    <ul class="nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <h1>Welcome to <span>PRIME STORE</span></h1>
+    <p>Your next-gen app store with user & admin control</p>
+    <a href="#" class="btn">Download Now</a>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <h2>Features of PRIME STORE</h2>
+    <ul class="feature-list">
+      <li>User Panel with Authentication</li>
+      <li>Admin Panel with Real-time Control</li>
+      <li>Firebase Integration (Realtime DB & Auth)</li>
+      <li>YouTube & Instagram Banners</li>
+      <li>Modern UI like Google Play Store</li>
+    </ul>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <div class="gallery-grid">
+      <img src="https://via.placeholder.com/400x300?text=YouTube+Banner" alt="YouTube Banner">
+      <img src="https://via.placeholder.com/400x300?text=Instagram+Banner" alt="Instagram Banner">
+      <img src="https://via.placeholder.com/400x300?text=App+Screenshot+1" alt="App Screenshot 1">
+      <img src="https://via.placeholder.com/400x300?text=App+Screenshot+2" alt="App Screenshot 2">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form class="contact-form">
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" rows="5"></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="social-links">
+      <a href="https://youtube.com/" target="_blank">YouTube</a> |
+      <a href="https://instagram.com/" target="_blank">Instagram</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 PRIME STORE | All Rights Reserved
+  </footer>
+
+  <!-- Floating Download Button -->
+  <a href="#" class="floating-btn">Download Now</a>
+
+</body>
+</html>
